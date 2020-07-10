@@ -3,3 +3,23 @@
 body {
 	font-family: 'Open Sans', sans-serif;
 }
+
+#header {
+	display: flex;
+	justify-content: center;
+	padding-top: 60px;
+}
+
+#header img {
+	width: 55px;
+	margin-right: 5px;
+}
+
+#header h1 {
+	font-size: 40px;
+	margin-left: 5px;
+}
+
+#header h1 span {
+	font-weight: normal;
+}
