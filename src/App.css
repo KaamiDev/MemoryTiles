@@ -31,6 +31,11 @@ body {
 	text-decoration: none;
 }
 
+.body-content {
+	min-height: calc(100vh - 370px);
+	padding-bottom: 80px;
+}
+
 #home-page {
 	border: 3px solid #000;
 	width: 450px;
