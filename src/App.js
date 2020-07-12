@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import Home from './components/Home';
 import Play from './components/Play';
+import Footer from './components/Footer';
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path="/" exact component={Home} />
 					<Route path="/play" exact component={Play} />
 				</Switch>
+				<Footer />
 			</Router>
 		</div>
 	);
