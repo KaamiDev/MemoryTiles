@@ -23,3 +23,9 @@ body {
 #header h1 span {
 	font-weight: normal;
 }
+
+#header a {
+	display: flex;
+	color: #000;
+	text-decoration: none;
+}
