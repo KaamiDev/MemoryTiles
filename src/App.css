@@ -68,5 +68,16 @@ body {
 }
 
 .hovering-btn {
-	transform: translateX(10px);
+	animation-name: arrow-move;
+	animation-duration: .2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes arrow-move {
+	from {
+		transform: translateX(0px);
+	}
+	to {
+		transform: translateX(10px);
+	}
 }
