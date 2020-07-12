@@ -2,8 +2,8 @@ import React from 'react';
 
 const Play = () => {
 	return (
-		<div>
-			<p>Play Page</p>
+		<div id="play-page">
+			<h3>How good is your memory?</h3>
 		</div>
 	);
 };
