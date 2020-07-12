@@ -81,3 +81,25 @@ body {
 		transform: translateX(10px);
 	}
 }
+
+#footer {
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	align-items: center;
+}
+
+#footer h3 {
+	font-weight: 600;
+}
+
+#footer span {
+	font-weight: bold;
+}
+
+#footer h3 img {
+	width: 25px;
+	margin-bottom: -5px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
