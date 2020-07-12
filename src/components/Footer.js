@@ -6,7 +6,10 @@ const Footer = () => {
 	return (
 		<div id="footer">
 			<h3>
-				Made with <img src={heartIcon} alt="heart icon" /> by <span>Kaami</span>
+				Made with <img src={heartIcon} alt="heart icon" /> by{' '}
+				<a href="https://kaamidev.com" target="_blank" rel="noopener noreferrer">
+					Kaami
+				</a>
 			</h3>
 		</div>
 	);

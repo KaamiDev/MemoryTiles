@@ -98,8 +98,10 @@ body {
 	font-weight: 600;
 }
 
-#footer span {
+#footer a {
 	font-weight: bold;
+	color: #000;
+	text-decoration: none;
 }
 
 #footer h3 img {
