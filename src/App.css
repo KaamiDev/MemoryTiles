@@ -113,7 +113,7 @@ body {
 
 #play-page {
 	border: 3px solid #000;
-	width: 1000px;
+	width: 840px;
 	border-radius: 15px;
 	display: block;
 	margin-left: auto;
@@ -134,17 +134,19 @@ body {
 	font-weight: 600;
 }
 
-#play-page div {
-	margin-left: 80px;
-	margin-right: 80px;
+.square-container {
+	margin-left: 100px;
+	margin-right: 100px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
+	margin-bottom: 30px;
 }
 
 .square {
 	width: 40px;
 	height: 40px;
-	margin: 10px;
+	margin: 5px;
 	background-color: #ececec;
 }
