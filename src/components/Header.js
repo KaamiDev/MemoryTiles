@@ -5,7 +5,7 @@ import cubeIcon from '../icons/cube-icon.svg';
 
 const Header = () => {
 	return (
-		<div id="header" className="swoosh-ani">
+		<div id="header">
 			<Link to="/">
 				<img src={cubeIcon} alt="cube icon" />
 				<h1>
