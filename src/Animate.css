@@ -64,14 +64,14 @@
 	animation-fill-mode: forwards;
 }
 
-.play-caption {
+.play-caption-ani {
 	opacity: 0;
 	animation: fade-simple 1.5s;
 	animation-delay: 1s;
 	animation-fill-mode: forwards;
 }
 
-.square-container {
+.square-container-ani {
 	animation: fade-simple 1s;
 	animation-delay: 1.5s;
 	opacity: 0;
