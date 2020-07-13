@@ -9,8 +9,10 @@ const Play = () => {
 
 	return (
 		<div id="play-page">
-			<h3>Watch carefully for the pattern.</h3>
-			<h6>Level - 01</h6>
+			<h3 className="play-caption">Watch carefully for the pattern.</h3>
+			<h6 className="level-small" id={'level-big'}>
+				Level - 01
+			</h6>
 			<div className="square-container">{squares}</div>
 		</div>
 	);

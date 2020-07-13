@@ -29,6 +29,19 @@
 	}
 }
 
+@keyframes level-zoom-out {
+	from {
+		font-size: 50px;
+		font-weight: bold;
+		margin-top: 70px;
+	}
+	to {
+		font-size: 13px;
+		font-weight: 600;
+		margin-top: 0;
+	}
+}
+
 #header {
 	animation: fade-top 1s;
 }
@@ -43,4 +56,24 @@
 
 #footer {
 	animation: fade-simple 1s;
+}
+
+#level-big {
+	animation: level-zoom-out 1s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.play-caption {
+	opacity: 0;
+	animation: fade-simple 1.5s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+
+.square-container {
+	animation: fade-simple 1s;
+	animation-delay: 1.5s;
+	opacity: 0;
+	animation-fill-mode: forwards;
 }
