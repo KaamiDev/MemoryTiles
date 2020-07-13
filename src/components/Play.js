@@ -3,8 +3,8 @@ import React from 'react';
 import Square from './Square';
 
 const Play = () => {
-	const squares = Array.from(Array(48).keys()).map(() => {
-		return <Square />;
+	const squares = Array.from(Array(48).keys()).map((index) => {
+		return <Square number={index} />;
 	});
 
 	return (
