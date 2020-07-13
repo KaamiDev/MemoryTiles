@@ -1,0 +1,46 @@
+@keyframes fade-top {
+	from {
+		transform: translateY(-20px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes fade-simple {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade-zoom-in {
+	from {
+		transform: scale(0.8);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+#header {
+	animation: fade-top 1s;
+}
+
+#home-page {
+	animation: fade-zoom-in 1s;
+}
+
+#play-page {
+	animation: fade-zoom-in 1s;
+}
+
+#footer {
+	animation: fade-simple 1s;
+}
