@@ -42,6 +42,15 @@
 	}
 }
 
+@keyframes fade-green {
+	from {
+		background-color: #5fd253;
+	}
+	to {
+		background-color: #ececec;
+	}
+}
+
 #header {
 	animation: fade-top 1s;
 }
@@ -75,5 +84,10 @@
 	animation: fade-simple 1s;
 	animation-delay: 1.5s;
 	opacity: 0;
+	animation-fill-mode: forwards;
+}
+
+.square-green {
+	animation: fade-green 1s;
 	animation-fill-mode: forwards;
 }

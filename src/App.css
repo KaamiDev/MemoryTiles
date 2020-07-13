@@ -143,6 +143,7 @@ body {
 	height: 40px;
 	margin: 5px;
 	background-color: #ececec;
+	cursor: pointer;
 }
 
 #level-big {
@@ -156,4 +157,8 @@ body {
 	margin-top: 0;
 	font-size: 13px;
 	font-weight: 600;
+}
+
+.square-green {
+	background-color: #5fd253;
 }
