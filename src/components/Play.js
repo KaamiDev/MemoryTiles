@@ -5,26 +5,42 @@ import Square from './Square';
 const Play = () => {
 	const [ level, setLevel ] = useState(1);
 	const [ clickable, setClickable ] = useState(false);
-	const [ pattern, setPattern ] = useState([]);
+	const [ isShowing, setIsShowing ] = useState(true);
+	const [ pattern, setPattern ] = useState([ 0 ]);
 	const [ playing, setPlaying ] = useState(-1);
 	const [ starting, setStarting ] = useState(true);
 
 	const squares = Array.from(Array(48).keys()).map((index) => {
-		return <Square key={index} clickable={clickable} pattern={pattern} playing={playing} number={index} />;
+		return (
+			<Square
+				key={index}
+				clickable={clickable}
+				setPattern={setPattern}
+				setLevel={setLevel}
+				setClickable={setClickable}
+				pattern={pattern}
+				playing={playing}
+				number={index}
+			/>
+		);
 	});
 
 	useEffect(
 		() => {
 			const game = async () => {
+				setPlaying(-1);
 				setStarting(true);
 				setClickable(false);
+				setIsShowing(false);
 				await pause(2000);
 				let generatedPattern = await getPattern(level);
 				setPattern(generatedPattern);
 				setStarting(false);
 				await pause(1000);
 				await playPattern(generatedPattern);
+				console.log(generatedPattern);
 				setClickable(true);
+				setIsShowing(true);
 			};
 			game();
 		},
@@ -66,10 +82,10 @@ const Play = () => {
 	return (
 		<div id="play-page">
 			<h3 className={`play-caption ${starting ? 'play-caption-ani' : ''}`}>
-				{clickable ? 'Repeat the pattern below.' : 'Watch carefully for the pattern.'}
+				{!isShowing ? 'Repeat the pattern below.' : 'Watch carefully for the pattern.'}
 			</h3>
 			<h6 className="level-small" id={starting ? 'level-big' : ''}>
-				Level - 01
+				Level - 0{level}
 			</h6>
 			<div className={`square-container ${starting ? 'square-container-ani' : ''}`}>{squares}</div>
 		</div>

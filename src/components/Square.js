@@ -31,7 +31,19 @@ const Square = (props) => {
 	};
 
 	const handleClick = () => {
-		turnGreen();
+		console.log(props.pattern);
+		if (props.number === props.pattern[0]) {
+			turnGreen();
+			props.setPattern((pattern) => pattern.slice(1));
+			if (props.pattern.length <= 1) {
+				props.setClickable(false);
+				setTimeout(() => {
+					props.setLevel((lvl) => lvl + 1);
+				}, 1000);
+			}
+		} else {
+			// do somethnig
+		}
 	};
 
 	return (
