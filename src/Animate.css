@@ -89,8 +89,7 @@
 }
 
 .square-container-ani {
-	animation: fade-simple 1s;
-	animation-delay: 1.5s;
+	animation: fade-simple .5s;
 	opacity: 0;
 	animation-fill-mode: forwards;
 }

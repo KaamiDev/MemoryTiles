@@ -91,7 +91,9 @@ const Play = () => {
 			<h6 className="level-small" id={starting ? 'level-big' : ''}>
 				Level - 0{level}
 			</h6>
-			<div className={`square-container ${starting ? 'square-container-ani' : ''}`}>{squares}</div>
+			<div style={{ display: starting ? 'none' : '' }} className={`square-container square-container-ani`}>
+				{squares}
+			</div>
 		</div>
 	);
 };
