@@ -165,3 +165,10 @@ body {
 .square-red {
 	background-color: red;
 }
+
+:focus {
+	outline: none;
+}
+::-moz-focus-inner {
+	border: 0;
+}

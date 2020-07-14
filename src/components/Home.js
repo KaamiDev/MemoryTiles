@@ -10,8 +10,13 @@ const Home = () => {
 		<div id="home-page">
 			<h3>How good is your memory?</h3>
 			<Link to="/play" onMouseOver={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
-				Play
-				<img src={arrowIcon} className={hovering ? 'hovering-btn' : ''} alt="arrow icon" />
+				<p style={{ marginTop: 0, marginBottom: 0 }}>Play</p>
+				<img
+					src={arrowIcon}
+					style={{ marginTop: -10, marginBottom: -10 }}
+					className={hovering ? 'hovering-btn' : ''}
+					alt="arrow icon"
+				/>
 			</Link>
 		</div>
 	);
