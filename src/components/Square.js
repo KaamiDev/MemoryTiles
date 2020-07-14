@@ -8,6 +8,8 @@ const Square = (props) => {
 		() => {
 			if (props.playing === props.number && !props.clickable) {
 				turnGreen();
+			} else if (props.losingSquare === props.number) {
+				setIsRed(true);
 			}
 		},
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -31,10 +33,6 @@ const Square = (props) => {
 		}
 	};
 
-	const turnRed = () => {
-		setIsRed(true);
-	};
-
 	const handleClick = () => {
 		console.log(props.pattern);
 		if (props.number === props.pattern[0]) {
@@ -48,7 +46,7 @@ const Square = (props) => {
 			}
 		} else {
 			props.setClickable(false);
-			turnRed();
+			props.setLosingSquare(props.pattern[0]);
 		}
 	};
 

@@ -5,6 +5,7 @@ import Square from './Square';
 const Play = () => {
 	const [ level, setLevel ] = useState(1);
 	const [ clickable, setClickable ] = useState(false);
+	const [ losingSquare, setLosingSquare ] = useState(-1);
 	const [ isShowing, setIsShowing ] = useState(true);
 	const [ pattern, setPattern ] = useState([ 0 ]);
 	const [ playing, setPlaying ] = useState(-1);
@@ -17,6 +18,8 @@ const Play = () => {
 				clickable={clickable}
 				setPattern={setPattern}
 				setLevel={setLevel}
+				losingSquare={losingSquare}
+				setLosingSquare={setLosingSquare}
 				setClickable={setClickable}
 				pattern={pattern}
 				playing={playing}
@@ -29,6 +32,7 @@ const Play = () => {
 		() => {
 			const game = async () => {
 				setPlaying(-1);
+				setLosingSquare(-1);
 				setStarting(true);
 				setClickable(false);
 				setIsShowing(true);
