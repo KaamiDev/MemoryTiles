@@ -5,21 +5,33 @@ const Square = (props) => {
 
 	useEffect(
 		() => {
-			if (props.playing === props.number) {
+			if (props.playing === props.number && !props.clickable) {
 				turnGreen();
 			}
 		},
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 		[ props ]
 	);
 
 	const turnGreen = () => {
-		setIsGreen(true);
-		setTimeout(() => {
+		if (isGreen === true) {
 			setIsGreen(false);
-		}, 1000);
+			setTimeout(() => {
+				setIsGreen(true);
+				setTimeout(() => {
+					setIsGreen(false);
+				}, 1000);
+			}, 1);
+		} else {
+			setIsGreen(true);
+			setTimeout(() => {
+				setIsGreen(false);
+			}, 1000);
+		}
 	};
 
 	const handleClick = () => {
+		setIsGreen(false);
 		turnGreen();
 	};
 
