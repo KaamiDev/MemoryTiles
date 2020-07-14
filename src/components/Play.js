@@ -110,7 +110,7 @@ const Play = () => {
 				<h3>Game Over</h3>
 				<p className="gameover-caption">
 					You got to level {level}!<br />
-					The highest you've ever gone is {localStorage.getItem('highscore')}.
+					The furthest you've ever gotten is level {localStorage.getItem('highscore')}.
 				</p>
 				<Link to="/" onMouseOver={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
 					<p style={{ marginTop: 0, marginBottom: 0 }}>Home</p>
