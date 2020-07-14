@@ -46,6 +46,9 @@ const Square = (props) => {
 		} else {
 			props.setClickable(false);
 			props.setLosingSquare(props.pattern[0]);
+			setTimeout(() => {
+				props.setIsGameOver(true);
+			}, 1000);
 		}
 	};
 

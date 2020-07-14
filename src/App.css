@@ -176,3 +176,45 @@ body {
 body {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+#gameover-page {
+	border: 3px solid #000;
+	width: 450px;
+	border-radius: 15px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#gameover-page h3 {
+	font-weight: 600;
+	text-align: center;
+	margin-top: 25px;
+}
+
+.gameover-caption {
+	text-align: center;
+	font-size: 13px;
+	margin-bottom: 20px;
+}
+
+#gameover-page a {
+	display: flex;
+	justify-content: center;
+	border: 3px solid #000;
+	border-radius: 100px;
+	width: 150px;
+	padding: 5px;
+	color: #000;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+}
+
+#gameover-page a img {
+	width: 25px;
+	margin-left: 10px;
+}

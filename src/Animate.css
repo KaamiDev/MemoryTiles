@@ -72,6 +72,10 @@
 	animation: fade-zoom-in 1s;
 }
 
+#gameover-page {
+	animation: fade-zoom-in 1s;
+}
+
 #footer {
 	animation: fade-simple 1s;
 }
