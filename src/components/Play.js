@@ -31,7 +31,7 @@ const Play = () => {
 				setPlaying(-1);
 				setStarting(true);
 				setClickable(false);
-				setIsShowing(false);
+				setIsShowing(true);
 				await pause(2000);
 				let generatedPattern = await getPattern(level);
 				setPattern(generatedPattern);
@@ -40,7 +40,7 @@ const Play = () => {
 				await playPattern(generatedPattern);
 				console.log(generatedPattern);
 				setClickable(true);
-				setIsShowing(true);
+				setIsShowing(false);
 			};
 			game();
 		},
