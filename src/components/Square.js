@@ -36,7 +36,6 @@ const Square = (props) => {
 	};
 
 	const handleClick = () => {
-		console.log(props.pattern);
 		if (props.number === props.pattern[0]) {
 			turnGreen();
 			props.setPattern((pattern) => pattern.slice(1));
