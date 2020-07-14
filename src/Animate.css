@@ -68,8 +68,7 @@
 }
 
 #level-big {
-	animation: level-zoom-out 1s;
-	animation-delay: 1s;
+	animation: level-zoom-out 1s ease 1s, fade-simple 1s ease 0s;
 	animation-fill-mode: forwards;
 }
 
