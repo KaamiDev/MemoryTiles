@@ -40,6 +40,9 @@ const Square = (props) => {
 			if (props.pattern.length <= 1) {
 				props.setClickable(false);
 				setTimeout(() => {
+					if (parseInt(localStorage.getItem('highscore')) < props.level + 1) {
+						localStorage.setItem('highscore', (props.level + 1).toString());
+					}
 					props.setLevel((lvl) => lvl + 1);
 				}, 1000);
 			}

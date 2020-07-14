@@ -22,6 +22,7 @@ const Play = () => {
 				key={index}
 				clickable={clickable}
 				setPattern={setPattern}
+				level={level}
 				setLevel={setLevel}
 				losingSquare={losingSquare}
 				setLosingSquare={setLosingSquare}
@@ -37,6 +38,9 @@ const Play = () => {
 	useEffect(
 		() => {
 			const game = async () => {
+				if (!localStorage.getItem('highscore')) {
+					localStorage.setItem('highscore', '1');
+				}
 				setPlaying(-1);
 				setLosingSquare(-1);
 				setStarting(true);
@@ -107,8 +111,8 @@ const Play = () => {
 				<p className="gameover-caption">
 					You got to level {level >= 10 ? '' : '0'}
 					{level}!<br />
-					The highest you've ever gone is {level >= 10 ? '' : '0'}
-					{level}.
+					The highest you've ever gone is {parseInt(localStorage.getItem('highscore')) >= 10 ? '' : '0'}
+					{localStorage.getItem('highscore')}.
 				</p>
 				<Link to="/" onMouseOver={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
 					<p style={{ marginTop: 0, marginBottom: 0 }}>Home</p>
