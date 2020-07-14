@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Square = (props) => {
+	let soundfx = new Audio('/sounds/' + (props.number + 1) + '.mp3');
 	const [ isGreen, setIsGreen ] = useState(false);
 	const [ isRed, setIsRed ] = useState(false);
 
@@ -17,6 +18,7 @@ const Square = (props) => {
 	);
 
 	const turnGreen = () => {
+		soundfx.play();
 		if (isGreen === true) {
 			setIsGreen(false);
 			setTimeout(() => {
@@ -45,6 +47,7 @@ const Square = (props) => {
 				}, 1000);
 			}
 		} else {
+			soundfx.play();
 			props.setClickable(false);
 			props.setLosingSquare(props.pattern[0]);
 		}
