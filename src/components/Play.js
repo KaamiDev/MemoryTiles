@@ -52,8 +52,7 @@ const Play = () => {
 		return new Promise((resolve) => {
 			resolve(
 				Array.from(Array(number), () => {
-					// return Math.floor(Math.random() * 48);
-					return 1;
+					return Math.floor(Math.random() * 48);
 				})
 			);
 		});
