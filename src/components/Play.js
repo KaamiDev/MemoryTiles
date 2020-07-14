@@ -52,7 +52,8 @@ const Play = () => {
 		return new Promise((resolve) => {
 			resolve(
 				Array.from(Array(number), () => {
-					return Math.floor(Math.random() * 48);
+					// return Math.floor(Math.random() * 48);
+					return 1;
 				})
 			);
 		});
@@ -63,6 +64,7 @@ const Play = () => {
 			const num = pattern[i];
 			setPlaying(num);
 			await pause(1000);
+			setPlaying(-1);
 			if (i + 1 === pattern.length) {
 				return new Promise((resolve) => {
 					resolve(true);
