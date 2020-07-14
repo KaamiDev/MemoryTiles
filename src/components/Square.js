@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Square = () => {
+const Square = (props) => {
 	const [ isGreen, setIsGreen ] = useState(false);
+
+	useEffect(
+		() => {
+			if (props.playing === props.number) {
+				turnGreen();
+			}
+		},
+		[ props ]
+	);
 
 	const turnGreen = () => {
 		setIsGreen(true);
@@ -14,7 +23,13 @@ const Square = () => {
 		turnGreen();
 	};
 
-	return <div onClick={handleClick} className={`square ${isGreen ? 'square-green' : ''}`} />;
+	return (
+		<div
+			onClick={props.clickable ? handleClick : () => false}
+			style={{ cursor: props.clickable ? 'pointer' : '' }}
+			className={`square ${isGreen ? 'square-green' : ''}`}
+		/>
+	);
 };
 
 export default Square;
