@@ -31,7 +31,6 @@ const Square = (props) => {
 	};
 
 	const handleClick = () => {
-		setIsGreen(false);
 		turnGreen();
 	};
 
