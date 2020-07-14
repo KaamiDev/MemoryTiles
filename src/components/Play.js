@@ -95,7 +95,8 @@ const Play = () => {
 					{!isShowing ? 'Repeat the pattern below.' : 'Watch carefully for the pattern.'}
 				</h3>
 				<h6 className="level-small" id={starting ? 'level-big' : ''}>
-					Level - 0{level}
+					Level - {level >= 10 ? '' : '0'}
+					{level}
 				</h6>
 				<div style={{ display: starting ? 'none' : '' }} className={`square-container square-container-ani`}>
 					{squares}
@@ -104,8 +105,10 @@ const Play = () => {
 			<div style={{ display: isGameOver ? '' : 'none' }} id="gameover-page">
 				<h3>Game Over</h3>
 				<p className="gameover-caption">
-					You got to level 0{level}!<br />
-					The highest you've ever gone is level 0{level}.
+					You got to level {level >= 10 ? '' : '0'}
+					{level}!<br />
+					The highest you've ever gone is {level >= 10 ? '' : '0'}
+					{level}.
 				</p>
 				<Link to="/" onMouseOver={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
 					<p style={{ marginTop: 0, marginBottom: 0 }}>Home</p>
