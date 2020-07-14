@@ -42,7 +42,6 @@ const Play = () => {
 				setStarting(false);
 				await pause(1000);
 				await playPattern(generatedPattern);
-				console.log(generatedPattern);
 				setClickable(true);
 				setIsShowing(false);
 			};
