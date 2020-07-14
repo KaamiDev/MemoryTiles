@@ -51,6 +51,15 @@
 	}
 }
 
+@keyframes fade-red {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: #ececec;
+	}
+}
+
 #header {
 	animation: fade-top 1s;
 }
@@ -88,5 +97,10 @@
 
 .square-green {
 	animation: fade-green 1s;
+	animation-fill-mode: forwards;
+}
+
+.square-red {
+	animation: fade-red 1s;
 	animation-fill-mode: forwards;
 }

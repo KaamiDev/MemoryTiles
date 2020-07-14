@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Square = (props) => {
 	const [ isGreen, setIsGreen ] = useState(false);
+	const [ isRed, setIsRed ] = useState(false);
 
 	useEffect(
 		() => {
@@ -30,6 +31,10 @@ const Square = (props) => {
 		}
 	};
 
+	const turnRed = () => {
+		setIsRed(true);
+	};
+
 	const handleClick = () => {
 		console.log(props.pattern);
 		if (props.number === props.pattern[0]) {
@@ -42,7 +47,8 @@ const Square = (props) => {
 				}, 1000);
 			}
 		} else {
-			// do somethnig
+			props.setClickable(false);
+			turnRed();
 		}
 	};
 
@@ -50,7 +56,7 @@ const Square = (props) => {
 		<div
 			onClick={props.clickable ? handleClick : () => false}
 			style={{ cursor: props.clickable ? 'pointer' : '' }}
-			className={`square ${isGreen ? 'square-green' : ''}`}
+			className={`square ${isGreen ? 'square-green' : isRed ? 'square-red' : ''}`}
 		/>
 	);
 };
