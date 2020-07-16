@@ -5,7 +5,8 @@ import Square from './Square';
 
 import arrowIcon from '../icons/arrow-icon.svg';
 
-const Play = () => {
+const Play = (props) => {
+	const [ difficulty ] = useState(props.match.params.difficulty);
 	const [ level, setLevel ] = useState(1);
 	const [ isGameOver, setIsGameOver ] = useState(false);
 	const [ clickable, setClickable ] = useState(false);
