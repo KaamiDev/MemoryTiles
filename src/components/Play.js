@@ -67,9 +67,21 @@ const Play = (props) => {
 
 	const getPattern = (number) => {
 		return new Promise((resolve) => {
+			let prevNum = -1;
 			resolve(
 				Array.from(Array(number), () => {
-					return Math.floor(Math.random() * (difficulty === 'easy' ? 3 : difficulty === 'medium' ? 12 : 48));
+					const getRandomNum = () => {
+						let randomNum = Math.floor(
+							Math.random() * (difficulty === 'easy' ? 3 : difficulty === 'medium' ? 12 : 48)
+						);
+						if (randomNum === prevNum) {
+							return getRandomNum();
+						} else {
+							prevNum = randomNum;
+							return randomNum;
+						}
+					};
+					return getRandomNum();
 				})
 			);
 		});
