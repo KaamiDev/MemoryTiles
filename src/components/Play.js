@@ -17,10 +17,13 @@ const Play = (props) => {
 	const [ starting, setStarting ] = useState(true);
 	const [ hovering, setHovering ] = useState(false);
 
-	const squares = Array.from(Array(48).keys()).map((index) => {
+	const squares = Array.from(
+		Array(difficulty === 'easy' ? 3 : difficulty === 'medium' ? 12 : 48).keys()
+	).map((index) => {
 		return (
 			<Square
 				key={index}
+				difficulty={difficulty}
 				clickable={clickable}
 				setPattern={setPattern}
 				level={level}
@@ -66,7 +69,7 @@ const Play = (props) => {
 		return new Promise((resolve) => {
 			resolve(
 				Array.from(Array(number), () => {
-					return Math.floor(Math.random() * 48);
+					return Math.floor(Math.random() * (difficulty === 'easy' ? 3 : difficulty === 'medium' ? 12 : 48));
 				})
 			);
 		});
