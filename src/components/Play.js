@@ -42,8 +42,8 @@ const Play = (props) => {
 	useEffect(
 		() => {
 			const game = async () => {
-				if (!localStorage.getItem('highscore')) {
-					localStorage.setItem('highscore', '1');
+				if (!localStorage.getItem('highscore-' + difficulty)) {
+					localStorage.setItem('highscore-' + difficulty, '1');
 				}
 				setPlaying(-1);
 				setLosingSquare(-1);
@@ -125,8 +125,9 @@ const Play = (props) => {
 			<div style={{ display: isGameOver ? '' : 'none' }} id="gameover-page">
 				<h3>Game Over</h3>
 				<p className="gameover-caption">
-					You got to level {level}!<br />
-					The furthest you've ever gotten is level {localStorage.getItem('highscore')}.
+					You got to level {level} on <span style={{ textTransform: 'capitalize' }}>{difficulty}!</span>
+					<br />
+					The furthest you've ever gotten is level {localStorage.getItem('highscore-' + difficulty)}.
 				</p>
 				<Link to="/" onMouseOver={() => setHovering(true)} onMouseLeave={() => setHovering(false)}>
 					<p style={{ marginTop: 0, marginBottom: 0 }}>Home</p>
