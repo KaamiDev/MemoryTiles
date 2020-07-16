@@ -59,7 +59,7 @@ const Square = (props) => {
 		<div
 			onClick={props.clickable ? handleClick : () => false}
 			style={{ cursor: props.clickable ? 'pointer' : '' }}
-			className={`square ${isGreen ? 'square-green' : isRed ? 'square-red' : ''}`}
+			className={`square ${'square-' + props.difficulty} ${isGreen ? 'square-green' : isRed ? 'square-red' : ''}`}
 		/>
 	);
 };

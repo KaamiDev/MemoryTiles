@@ -139,10 +139,23 @@ body {
 }
 
 .square {
-	width: 40px;
-	height: 40px;
 	margin: 5px;
 	background-color: #ececec;
+}
+
+.square-easy {
+	width: 190px;
+	height: 190px;
+}
+
+.square-medium {
+	width: 90px;
+	height: 90px;
+}
+
+.square-hard {
+	width: 40px;
+	height: 40px;
 }
 
 #level-big {
