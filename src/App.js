@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import './App.css';
 import './Animate.css';
@@ -20,6 +20,9 @@ function App() {
 						<Route path="/" exact component={Home} />
 						<Route path="/play/:difficulty(easy|medium|hard)" exact component={Play} />
 						<Route path="/play" exact component={Difficulty} />
+						<Route path="/">
+							<Redirect to="/" />
+						</Route>
 					</Switch>
 				</div>
 				<Footer />
