@@ -6,6 +6,7 @@ import './Animate.css';
 
 import Header from './components/Header';
 import Home from './components/Home';
+import Difficulty from './components/Difficulty';
 import Play from './components/Play';
 import Footer from './components/Footer';
 
@@ -18,6 +19,7 @@ function App() {
 					<Switch>
 						<Route path="/" exact component={Home} />
 						<Route path="/play/:difficulty(easy|medium|hard)" exact component={Play} />
+						<Route path="/play" exact component={Difficulty} />
 					</Switch>
 				</div>
 				<Footer />
